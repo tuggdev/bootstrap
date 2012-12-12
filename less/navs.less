@@ -17,8 +17,8 @@
   display: block;
 }
 .nav > li > a:hover {
-  text-decoration: none;
-  background-color: @grayLighter;
+//  text-decoration: none;
+  color: @green;
 }
 
 // Redeclare pull classes because of specifity
@@ -140,14 +140,14 @@
   padding-bottom: 8px;
   margin-top: 2px;
   margin-bottom: 2px;
-  .border-radius(5px);
+  //.border-radius(5px);
 }
 
 // Active state
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
-  color: @white;
-  background-color: @linkColor;
+  color: @green;
+  //background-color: @linkColor;
 }
 
 
@@ -238,13 +238,13 @@
 
 // Open dropdowns
 // -------------------------
-.nav-tabs .open .dropdown-toggle,
-.nav-pills .open .dropdown-toggle,
-.nav > li.dropdown.open.active > a:hover {
-  color: @white;
-  background-color: @grayLight;
-  border-color: @grayLight;
-}
+//.nav-tabs .open .dropdown-toggle,
+//.nav-pills .open .dropdown-toggle,
+//.nav > li.dropdown.open.active > a:hover {
+  //color: @white;
+  //background-color: @grayLight;
+  //border-color: @grayLight;
+//}
 .nav li.dropdown.open .caret,
 .nav li.dropdown.open.active .caret,
 .nav li.dropdown.open a:hover .caret {
@@ -254,9 +254,9 @@
 }
 
 // Dropdowns in stacked tabs
-.tabs-stacked .open > a:hover {
-  border-color: @grayLight;
-}
+//.tabs-stacked .open > a:hover {
+  //border-color: @grayLight;
+//}
 
 
 
@@ -379,7 +379,7 @@
 }
 // Nuke hover effects
 .nav > .disabled > a:hover {
-  text-decoration: none;
+//  text-decoration: none;
   background-color: transparent;
   cursor: default;
 }
