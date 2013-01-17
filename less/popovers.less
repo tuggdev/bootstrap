@@ -16,9 +16,8 @@
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0,0,0,.2);
-  .border-radius(6px);
+  border-top: 6px solid @greenButton;
+  border-bottom:6px solid #c4c4c4;
   .box-shadow(0 5px 10px rgba(0,0,0,.2));
 
   // Overrides for proper insertion
@@ -83,7 +82,7 @@
     }
   }
   &.right .arrow {
-    top: 50%;
+    top: 28px;
     left: -@popoverArrowOuterWidth;
     margin-top: -@popoverArrowOuterWidth;
     border-left-width: 0;
@@ -112,7 +111,7 @@
   }
 
   &.left .arrow {
-    top: 50%;
+    top: 28px;
     right: -@popoverArrowOuterWidth;
     margin-top: -@popoverArrowOuterWidth;
     border-right-width: 0;
