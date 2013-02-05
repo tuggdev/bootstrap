@@ -26,7 +26,6 @@ table {
     line-height: @baseLineHeight;
     text-align: left;
     vertical-align: top;
-    border-top: 1px solid @tableBorder;
   }
   th {
     font-weight: normal;
@@ -34,19 +33,6 @@ table {
   // Bottom align for column headings
   thead th {
     vertical-align: bottom;
-  }
-  // Remove top border from thead by default
-  caption + thead tr:first-child th,
-  caption + thead tr:first-child td,
-  colgroup + thead tr:first-child th,
-  colgroup + thead tr:first-child td,
-  thead:first-child tr:first-child th,
-  thead:first-child tr:first-child td {
-    border-top: 0;
-  }
-  // Account for multiple tbody instances
-  tbody + tbody {
-    border-top: 2px solid @tableBorder;
   }
 
   // Nesting
@@ -67,6 +53,26 @@ table {
   }
 }
 
+.table-lined {
+  th,
+  td {
+    border-top: 1px solid @tableBorder;
+  }
+  // Remove top border from thead by default
+  caption + thead tr:first-child th,
+  caption + thead tr:first-child td,
+  colgroup + thead tr:first-child th,
+  colgroup + thead tr:first-child td,
+  thead:first-child tr:first-child th,
+  thead:first-child tr:first-child td {
+    border-top: 0;
+  }
+  // Account for multiple tbody instances
+  tbody + tbody {
+    border-top: 2px solid @tableBorder;
+  }
+}
+
 
 // BORDERED VERSION
 // ----------------
@@ -79,6 +85,7 @@ table {
   .border-radius(@baseBorderRadius);
   th,
   td {
+    border-top: 1px solid @tableBorder;
     border-left: 1px solid @tableBorder;
   }
   // Prevent a double border
