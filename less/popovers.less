@@ -10,7 +10,7 @@
   z-index: @zindexPopover;
   display: none;
   width: 236px;
-  padding: 1px;
+  padding: 0;
   text-align: left; // Reset given new insertion method
   background-color: @popoverBackground;
   -webkit-background-clip: padding-box;
@@ -32,13 +32,13 @@
 
 .popover-title {
   margin: 0; // reset heading margin
-  padding: 8px 14px;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 18px;
-  background-color: @popoverTitleBackground;
+  padding: 6px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 17px;
+  color: white;
+  background-color: @greenButton;
   border-bottom: 1px solid darken(@popoverTitleBackground, 5%);
-  .border-radius(5px 5px 0 0);
 }
 
 .popover-content {
@@ -99,15 +99,8 @@
     left: 50%;
     margin-left: -@popoverArrowOuterWidth;
     border-top-width: 0;
-    border-bottom-color: #999; // IE8 fallback
-    border-bottom-color: @popoverArrowOuterColor;
-    top: -@popoverArrowOuterWidth;
-    &:after {
-      top: 1px;
-      margin-left: -@popoverArrowWidth;
-      border-top-width: 0;
-      border-bottom-color: @popoverArrowColor;
-    }
+    border-bottom-color: @greenButton;
+    top: ((-@popoverArrowOuterWidth)-6px);
   }
 
   &.left .arrow {
