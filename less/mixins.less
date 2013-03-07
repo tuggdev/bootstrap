@@ -497,11 +497,11 @@
   color: @textColor;
   text-shadow: @textShadow;
   background-color: mix(@startColor, @endColor, 60%);
-  background-image: -moz-linear-gradient(bottom, @endColor 34%, @startColor 66%); // FF 3.6+
+  background-image: -moz-linear-gradient(top, @startColor 47%, @endColor 53%); // FF 3.6+
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
-  background-image: -webkit-linear-gradient(bottom, @endColor 34%, @startColor 66%); // Safari 5.1+, Chrome 10+
-  background-image: -o-linear-gradient(bottom, @endColor 34%, @startColor 66%); // Opera 11.10
-  background-image: linear-gradient(to bottom, @endColor 34%, @startColor 66%); // Standard, IE10
+  background-image: -webkit-linear-gradient(top, @startColor 47%, @endColor 53%); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, @startColor 47%, @endColor 53%); // Opera 11.10
+  background-image: linear-gradient(to bottom, @startColor 47%, @endColor 53%); // Standard, IE10
   background-repeat: repeat-x;
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
   *background-color: @endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
@@ -513,6 +513,16 @@
     background-color: @endColor;
     *background-color: darken(@endColor, 5%);
   }
+
+	&:hover{
+		background-color: mix(@startColor, @endColor, 60%);
+	  background-image: -moz-linear-gradient(top, @startColor 47%, @endColor 53%); // FF 3.6+
+	  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+	  background-image: -webkit-linear-gradient(top, @startColor 47%, lighten(@endColor, 5%) 53%); // Safari 5.1+, Chrome 10+
+	  background-image: -o-linear-gradient(top, @startColor 47%, @endColor 53%); // Opera 11.10
+	  background-image: linear-gradient(to bottom, @startColor 47%, lighten(@endColor, 5%) 53%); // Standard, IE10
+	  background-repeat: repeat-x;
+	}
 
   // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
   &:active,
